@@ -3,3 +3,11 @@
 	email = tiago.fernandez@gmail.com
 [merge]
 	tool = opendiff
+[core]
+	excludesfile = ~/.gitignore
+	editor = mate -w
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
