@@ -1,3 +1,5 @@
 [user]
 	name = Tiago Fernandez
-	email = tiago182@gmail.com
+	email = tiago.fernandez@gmail.com
+[merge]
+	tool = opendiff
