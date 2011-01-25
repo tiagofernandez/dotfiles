@@ -1,13 +1,21 @@
-install: copy_home copy_scripts copy_settings
+install: home scripts settings
 
-copy_home:
-	@cd home && find . | cpio -pd ~
+home:
+	@cd home && find . | cpio -pud ~
 	
-copy_scripts:
-	@cd scripts && find . | cpio -pd /usr/local/bin
+scripts:
+	@cd scripts && find . | cpio -pud /usr/local/bin
 
-copy_settings_xcode:
-	@mkdir -p ~/Library/Application\ Support/Xcode/Color\ Themes
-	@cd settings/xcode && find . | cpio -pd ~/Library/Application\ Support/Xcode/Color\ Themes
+settings_eclipse:
+	@mkdir -p ~/Library/Preferences/EclipseWorkspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/
+	@cd settings/eclipse/colors/vibrantink/ && find org* | cpio -pud ~/Library/Preferences/EclipseWorkspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/
 
-copy_settings: copy_settings_xcode
+settings_intellij:
+	@mkdir -p ~/Library/Preferences/IntelliJIdea10CE/
+	@cd settings/intellij/ && find . | cpio -pud ~/Library/Preferences/IntelliJIdea10CE/
+
+settings_xcode:
+	@mkdir -p ~/Library/Application\ Support/Xcode/Color\ Themes/
+	@cd settings/xcode/colors/ && find . | cpio -pud ~/Library/Application\ Support/Xcode/Color\ Themes/
+
+settings: settings_eclipse settings_intellij settings_xcode
