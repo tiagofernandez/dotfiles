@@ -19,6 +19,7 @@ Dir.foreach(@path) { |filename|
   if repository?(filename)
     print "Checking #{filename}... "
     Dir.chdir(filename) do
+      # TODO Handle unpushed commits: `git log origin/master..HEAD`
       status = `git status 2>&1`
       if status =~ /fatal|nothing to commit \(working directory clean\)/i
         print "#{@bcolors[:ok_green]}ok!#{@bcolors[:endc]}\n"
