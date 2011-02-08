@@ -17,10 +17,12 @@ end
 
 def check_uncommitted_and_unpushed
   status = `git status 2>&1 && git log origin/master..HEAD`
-  if status =~ /fatal|nothing to commit \(working directory clean\)/i
-    print "#{@bcolors[:ok_green]}ok!#{@bcolors[:endc]}\n"
-  else
+  all_committed = (status =~ /nothing to commit/i)
+  branch_ahead = (status =~ /Your branch is ahead/)
+  if not all_committed or branch_ahead
     print "#{@bcolors[:warning]}not ok!#{@bcolors[:endc]}\n"
+  else
+    print "#{@bcolors[:ok_green]}ok!#{@bcolors[:endc]}\n"
   end
 end
 
