@@ -1,9 +1,9 @@
-install: home scripts settings
+install: copy_home copy_scripts settings
 
-home:
+copy_home:
 	@cd home && find . | cpio -pud ~
 	
-scripts:
+copy_scripts:
 	@cd scripts && find . | cpio -pud /usr/local/bin
 
 settings_eclipse:
