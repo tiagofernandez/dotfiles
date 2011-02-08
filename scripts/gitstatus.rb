@@ -22,8 +22,10 @@ def check_uncommitted_and_unpushed
   branch_ahead = (status =~ /Your branch is ahead/)
   if not_gitrepo
     print "#{@bcolors[:ok_blue]}not git repository.#{@bcolors[:endc]}\n"
-  elsif not all_committed or branch_ahead
-    print "#{@bcolors[:warning]}uncommitted and/or unpushed changes.#{@bcolors[:endc]}\n"
+  elsif not all_committed
+    print "#{@bcolors[:warning]}uncommitted changes.#{@bcolors[:endc]}\n"
+  elsif branch_ahead
+    print "#{@bcolors[:warning]}unpushed commits.#{@bcolors[:endc]}\n"
   else
     print "#{@bcolors[:ok_green]}in sync.#{@bcolors[:endc]}\n"
   end
