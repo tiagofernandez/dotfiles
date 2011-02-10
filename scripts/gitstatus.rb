@@ -18,7 +18,7 @@ end
 def check_uncommitted_and_unpushed
   status = `git status 2>&1 && git log origin/master..HEAD`
   if (status =~ /fatal/)
-    print "not git repository."
+    print "not git repository.\n"
   else
     if not (status =~ /nothing to commit/i)
       print "#{@bcolors[:warning]}uncommitted changes.#{@bcolors[:endc]}\n"
