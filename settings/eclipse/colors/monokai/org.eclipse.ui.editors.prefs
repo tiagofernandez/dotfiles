@@ -1,12 +1,15 @@
-#Fri Feb 18 11:40:02 CET 2011
+#Fri Feb 18 13:48:32 CET 2011
 AbstractTextEditor.Color.Background.SystemDefault=false
 AbstractTextEditor.Color.Foreground.SystemDefault=false
 lineNumberRuler=true
 AbstractTextEditor.Color.Foreground=248,248,242
 AbstractTextEditor.Color.SelectionBackground=24,24,24
 currentLineColor=50,50,42
+net.sf.eclipsecs.warning.text.style=NONE
+writeOccurrenceIndicationColor=98,62,24
 AbstractTextEditor.Color.Background=39,40,34
 AbstractTextEditor.Color.SelectionBackground.SystemDefault=false
 eclipse.preferences.version=1
+occurrenceIndicationColor=98,62,24
 printMarginColumn=120
 overviewRuler_migration=migrated_3.1

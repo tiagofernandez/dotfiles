@@ -11,7 +11,7 @@
     <option name="LEFT_GUTTER_BACKGROUND" value="34352d" />
     <option name="LINE_NUMBERS_COLOR" value="808080" />
     <option name="MODIFIED_LINES_COLOR" value="bc94ff" />
-    <option name="READONLY_BACKGROUND" value="34352d" />
+    <option name="READONLY_BACKGROUND" value="272822" />
     <option name="READONLY_FRAGMENT_BACKGROUND" value="34352d" />
     <option name="RIGHT_MARGIN_COLOR" value="444239" />
     <option name="SELECTION_BACKGROUND" value="181818" />
@@ -582,7 +582,7 @@
     <option name="IDENTIFIER_UNDER_CARET_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" />
-        <option name="BACKGROUND" />
+        <option name="BACKGROUND" value="623e18" />
         <option name="FONT_TYPE" value="0" />
         <option name="EFFECT_COLOR" />
         <option name="EFFECT_TYPE" value="0" />
@@ -1652,7 +1652,7 @@
     <option name="WRITE_IDENTIFIER_UNDER_CARET_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" />
-        <option name="BACKGROUND" value="121212" />
+        <option name="BACKGROUND" value="623e18" />
         <option name="FONT_TYPE" value="0" />
         <option name="EFFECT_COLOR" />
         <option name="EFFECT_TYPE" value="0" />

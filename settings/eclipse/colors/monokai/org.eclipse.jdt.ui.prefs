@@ -1,4 +1,4 @@
-#Fri Feb 18 13:20:51 CET 2011
+#Fri Feb 18 13:34:21 CET 2011
 content_assist_proposals_foreground=0,0,0
 semanticHighlighting.staticField.italic=false
 pf_coloring_argument_bold=false
@@ -35,7 +35,7 @@ semanticHighlighting.typeArgument.color=102,217,239
 semanticHighlighting.localVariableDeclaration.enabled=true
 spelling_locale_initialized=true
 semanticHighlighting.number.color=174,129,255
-sourceHoverBackgroundColor=255,255,225
+sourceHoverBackgroundColor=255,0,0
 fontPropagated=true
 org.eclipse.jdt.ui.editor.tab.width=
 semanticHighlighting.parameterVariable.enabled=true
