@@ -8,7 +8,7 @@ copy_scripts:
 
 settings_eclipse:
 	@mkdir -p ~/Library/Preferences/EclipseWorkspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/
-	@cd settings/eclipse/colors/vibrantink/ && find org* | cpio -pud ~/Library/Preferences/EclipseWorkspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/
+	@cd settings/eclipse/colors/monokai/ && find org* | cpio -pud ~/Library/Preferences/EclipseWorkspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/
 
 settings_intellij:
 	@mkdir -p ~/Library/Preferences/IntelliJIdea10CE/

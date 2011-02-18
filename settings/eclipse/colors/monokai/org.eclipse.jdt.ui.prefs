@@ -1,4 +1,4 @@
-#Fri Feb 18 13:34:21 CET 2011
+#Fri Feb 18 22:45:24 CET 2011
 content_assist_proposals_foreground=0,0,0
 semanticHighlighting.staticField.italic=false
 pf_coloring_argument_bold=false
@@ -21,7 +21,7 @@ semanticHighlighting.localVariable.color=248,248,242
 semanticHighlighting.enum.enabled=true
 semanticHighlighting.interface.enabled=true
 semanticHighlighting.inheritedMethodInvocation.color=166,226,46
-content_assist_number_of_computers=19
+content_assist_number_of_computers=20
 java_keyword_return_bold=false
 semanticHighlighting.staticFinalField.color=174,129,255
 useAnnotationsPrefPage=true
@@ -46,7 +46,7 @@ semanticHighlighting.class.color=102,217,239
 java_operator=249,38,114
 java_keyword_return=249,38,114
 semanticHighlighting.interface.color=102,217,239
-org.eclipse.jface.textfont=1|Courier New|9.75|0|WINDOWS|1|-13|0|0|0|400|0|0|0|0|3|2|1|49|Courier New;
+org.eclipse.jface.textfont=1|Monaco|12.0|0|COCOA|1|Monaco;
 tabWidthPropagated=true
 semanticHighlighting.typeParameter.color=249,38,114
 org.eclipse.jdt.ui.javadoclocations.migrated=true
