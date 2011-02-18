@@ -639,6 +639,16 @@
         <option name="ERROR_STRIPE_COLOR" />
       </value>
     </option>
+    <option name="JAVA_BLOCK_COMMENT">
+      <value>
+        <option name="FOREGROUND" value="808080" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="0" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
     <option name="JAVA_BRACES">
       <value>
         <option name="FOREGROUND" value="c8c8c8" />
@@ -673,7 +683,7 @@
       <value>
         <option name="FOREGROUND" value="75715e" />
         <option name="BACKGROUND" />
-        <option name="FONT_TYPE" value="2" />
+        <option name="FONT_TYPE" value="0" />
         <option name="EFFECT_COLOR" />
         <option name="EFFECT_TYPE" value="0" />
         <option name="ERROR_STRIPE_COLOR" />
@@ -693,7 +703,7 @@
       <value>
         <option name="FOREGROUND" value="f92672" />
         <option name="BACKGROUND" />
-        <option name="FONT_TYPE" value="1" />
+        <option name="FONT_TYPE" value="0" />
         <option name="EFFECT_COLOR" />
         <option name="EFFECT_TYPE" value="1" />
         <option name="ERROR_STRIPE_COLOR" />
@@ -733,7 +743,7 @@
       <value>
         <option name="FOREGROUND" value="888671" />
         <option name="BACKGROUND" />
-        <option name="FONT_TYPE" value="2" />
+        <option name="FONT_TYPE" value="0" />
         <option name="EFFECT_COLOR" />
         <option name="EFFECT_TYPE" value="0" />
         <option name="ERROR_STRIPE_COLOR" />
@@ -1541,9 +1551,9 @@
     </option>
     <option name="TYPE_PARAMETER_NAME_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="b6ea35" />
+        <option name="FOREGROUND" value="66d9ef" />
         <option name="BACKGROUND" />
-        <option name="FONT_TYPE" value="1" />
+        <option name="FONT_TYPE" value="0" />
         <option name="EFFECT_COLOR" />
         <option name="EFFECT_TYPE" value="0" />
         <option name="ERROR_STRIPE_COLOR" />
