@@ -1,4 +1,5 @@
-#Sun Feb 20 14:49:49 CET 2011
+#Sun Feb 20 14:58:49 CET 2011
+secondaryIPColor=91,91,90
 printMargin=true
 AbstractTextEditor.Color.Background=39,40,34
 eclipse.preferences.version=1
@@ -7,6 +8,7 @@ writeOccurrenceIndicationColor=98,62,24
 AbstractTextEditor.Color.Foreground.SystemDefault=false
 AbstractTextEditor.Color.Foreground=248,248,242
 AbstractTextEditor.Color.SelectionBackground=24,24,24
+currentIPColor=69,70,67
 overviewRuler_migration=migrated_3.1
 tabWidth=2
 lineNumberRuler=true

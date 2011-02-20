@@ -1,4 +1,4 @@
-#Sun Feb 20 14:49:49 CET 2011
+#Sun Feb 20 14:55:20 CET 2011
 semanticHighlighting.localVariableDeclaration.color=248,248,242
 spelling_user_dictionary_encoding=
 java_comment_task_tag=117,113,94
@@ -36,7 +36,7 @@ org.eclipse.jdt.ui.text.templates_migrated=true
 semanticHighlighting.class.color=102,217,239
 semanticHighlighting.annotation.color=102,217,239
 semanticHighlighting.parameterVariable.color=253,151,31
-sourceHoverBackgroundColor=39,40,34
+sourceHoverBackgroundColor=37,37,30
 org.eclipse.jdt.ui.ondemandthreshold=5
 useAnnotationsPrefPage=true
 proposalOrderMigrated=true
@@ -63,8 +63,9 @@ spelling_ignore_sentence=true
 semanticHighlighting.typeArgument.color=102,217,239
 semanticHighlighting.class.enabled=true
 java_doc_keyword_bold=false
-semanticHighlighting.staticField.color=174,129,255
+sourceHoverBackgroundColor.SystemDefault=false
 org.eclipse.jdt.ui.importorder=java;javax;org;com;
+semanticHighlighting.staticField.color=174,129,255
 content_assist_proposals_background=255,255,255
 semanticHighlighting.number.color=174,129,255
 content_assist_number_of_computers=20
