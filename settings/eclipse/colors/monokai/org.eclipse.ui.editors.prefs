@@ -1,4 +1,4 @@
-#Sun Feb 20 14:58:49 CET 2011
+#Sun Feb 20 17:55:30 CET 2011
 secondaryIPColor=91,91,90
 printMargin=true
 AbstractTextEditor.Color.Background=39,40,34
@@ -13,6 +13,7 @@ overviewRuler_migration=migrated_3.1
 tabWidth=2
 lineNumberRuler=true
 printMarginColumn=120
+searchResultIndicationColor=76,76,76
 currentLineColor=50,50,42
 net.sf.eclipsecs.warning.text.style=NONE
 occurrenceIndicationColor=98,62,24
