@@ -15,7 +15,7 @@ settings_intellij:
 	@cd settings/intellij/ && find . | cpio -pud ~/Library/Preferences/IntelliJIdea10CE/
 
 settings_xcode:
-	@mkdir -p ~/Library/Application\ Support/Xcode/Color\ Themes/
-	@cd settings/xcode/colors/ && find . | cpio -pud ~/Library/Application\ Support/Xcode/Color\ Themes/
+	@mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
+	@cd settings/xcode/colors/ && find . | cpio -pud ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
 
 settings: settings_eclipse settings_intellij settings_xcode
