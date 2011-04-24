@@ -13,3 +13,6 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
 fi
 
 alias ls="ls -a"
+
+source ~/.pythonbrew/etc/bashrc
+source ~/.rvm/scripts/rvm
