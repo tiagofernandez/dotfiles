@@ -1,2 +1,2 @@
 #! /bin/sh
-find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
+find . \( -name .git -prune \) -o -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
