@@ -8,3 +8,4 @@ copy_scripts:
 
 copy_settings:
 	@cd settings/sublime_text_2 && find . | cpio -pud ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
+	@cd settings/sublime_text && find . | cpio -pud ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
