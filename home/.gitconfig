@@ -1,13 +1,15 @@
 [user]
-	name = Tiago Fernandez
-	email = tiago.fernandez@gmail.com
+  name = Tiago Fernandez
+  email = tiago.fernandez@gmail.com
 [merge]
-	tool = opendiff
+  tool = opendiff
 [core]
-	excludesfile = ~/.gitignore
-	editor = mate -w
+  excludesfile = ~/.gitignore
+  editor = subl -w
 [color]
-	branch = auto
-	diff = auto
-	interactive = auto
-	status = auto
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+[alias]
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
