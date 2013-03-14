@@ -1,6 +1,6 @@
 export PS1='\w `git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`\[\033[37m\]$\[\033[00m\] '
 
-export PATH=$PATH:$HOME/.rvm/bin
+export PATH=$PATH:$HOME/.rvm/bin:/usr/local/share/npm/bin/
 export MANPATH=/opt/local/share/man:$MANPATH
 
 export EDITOR='subl -w'
