@@ -5,6 +5,6 @@ My configuration files and useful scripts in OS X.
 
 ## Author
 
-Tiago Fernandez (2010) | [Twitter][t]
+Tiago Fernandez (2010-2013) | [Blog][b]
 
-[t]: http://twitter.com/tiagofernandez
+[t]: http://blog.tiagofernandez.com/
