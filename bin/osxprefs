@@ -1,0 +1,3 @@
+#!/bin/bash
+chflags nohidden ~/Library/
+defaults write -g ApplePressAndHoldEnabled -bool false
