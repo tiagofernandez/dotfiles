@@ -1,6 +1,6 @@
 export PS1='\w `git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`\[\033[37m\]$\[\033[00m\] '
 
-export PATH=$PATH:$HOME/.rvm/bin:/usr/local/share/npm/bin/
+export PATH=$PATH:$HOME/.rvm/bin:/usr/local/share/npm/bin/:/usr/local/Cellar/groovy/2.1.0/bin
 export MANPATH=/opt/local/share/man:$MANPATH
 
 export EDITOR='subl -w'
@@ -20,3 +20,6 @@ fi
 [[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
 
 alias ls="ls -a"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
