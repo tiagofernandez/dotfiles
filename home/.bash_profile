@@ -24,3 +24,6 @@ source ~/.pyenv/versions/2.7.5/bin/virtualenvwrapper.sh
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Aliases
+alias ls="ls -a"
