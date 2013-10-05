@@ -1,3 +1,6 @@
+# Load the individual per-interactive-shell startup file
+if [ -f ~/.bashrc ]; then source ~/.bashrc ; fi
+
 # Command line
 export PS1='\w `git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`\[\033[37m\]$\[\033[00m\] '
 export GREP_OPTIONS="--color=auto"
