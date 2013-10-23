@@ -14,7 +14,9 @@ export GROOVY_HOME=/usr/local/Cellar/groovy/2.1.7
 export NPM_HOME=/usr/local/share/npm
 export PYTHONHOME=$HOME/.pyenv/versions/2.7.5
 export RVM_HOME=$HOME/.rvm
-export PATH=$RVM_HOME/bin:$PYTHONHOME/bin:$GROOVY_HOME/bin:$NPM_HOME/bin/:$HEROKU_HOME/bin:$PATH
+export POSTGRESQL_HOME=/Library/PostgreSQL/9.3
+export MONGODB_HOME=$HOME/Toolbox/mongodb-osx-x86_64-2.4.7
+export PATH=$RVM_HOME/bin:$PYTHONHOME/bin:$GROOVY_HOME/bin:$NPM_HOME/bin/:$POSTGRESQL_HOME/bin:$MONGODB_HOME/bin:$HEROKU_HOME/bin:$PATH
 
 # Homebrew
 if [ -f `brew --prefix`/etc/bash_completion ]; then
