@@ -32,12 +32,16 @@ set __fish_git_prompt_char_upstream_behind '↓'
 
 # Customize the default prompt
 function fish_prompt
-	set last_status $status
-	set_color $fish_color_cwd
-	printf '%s' (prompt_pwd)
-	set_color normal
-	printf '%s ' (__fish_git_prompt)
-	set_color normal
+  set last_status $status
+  set_color $fish_color_cwd
+  printf '%s' (prompt_pwd)
+  if set -q VIRTUAL_ENV
+    set_color magenta
+    printf ' (%s)' (basename "$VIRTUAL_ENV")
+  end
+  set_color normal
+  printf '%s ' (__fish_git_prompt)
+  set_color normal
 end
 
 # Utility to reload the configuration
@@ -48,6 +52,10 @@ end
 
 # Initialize Pyenv
 . (pyenv init - | psub)
+
+# Initialize VirtualFish
+. $HOME/.config/fish/virtualfish/virtual.fish
+. $HOME/.config/fish/virtualfish/global_requirements.fish
 
 # Show hidden files by default
 alias ls='ls -a'
