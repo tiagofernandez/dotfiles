@@ -10,7 +10,7 @@ export EDITOR='subl -w'
 
 # Paths
 export HEROKU_HOME=/usr/local/heroku
-export GROOVY_HOME=/usr/local/Cellar/groovy/2.1.7
+export GROOVY_HOME=/usr/local/Cellar/groovy/2.1.8
 export NPM_HOME=/usr/local/share/npm
 export PYTHONHOME=$HOME/.pyenv/versions/2.7.5
 export RVM_HOME=$HOME/.rvm
