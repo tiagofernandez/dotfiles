@@ -52,6 +52,10 @@ end
 . $HOME/.config/fish/virtualfish/virtual.fish
 . $HOME/.config/fish/virtualfish/global_requirements.fish
 
+# Initialize RVM
+set rvm_project_rvmrc 1
+. $HOME/.config/fish/functions/rvm.fish
+
 # Show hidden files by default
 alias ls='ls -a'
 
