@@ -1,3 +1,4 @@
+# http://fishshell.com/docs/current/index.html
 # http://ridiculousfish.com/shell/user_doc/html/
 
 # Change the greeting message
@@ -44,12 +45,6 @@ function fish_prompt
   set_color normal
 end
 
-# Utility to reload the configuration
-function reload_fish
-  . $HOME/.config/fish/config.fish
-  echo "Fish configuration reloaded."
-end
-
 # Initialize Pyenv
 . (pyenv init - | psub)
 
@@ -59,3 +54,15 @@ end
 
 # Show hidden files by default
 alias ls='ls -a'
+
+
+function reload_fish
+  . $HOME/.config/fish/config.fish
+  echo "Fish configuration reloaded."
+end
+
+function gem_uninstall_all
+  for each in (gem list --no-version)
+    sudo gem uninstall -aIx $each
+  end
+end
