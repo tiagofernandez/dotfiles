@@ -2,6 +2,7 @@
   name = Tiago Fernandez
   email = tiago.fernandez@gmail.com
 [merge]
+  ff = no
   tool = ksdiff
 [core]
   excludesfile = ~/.gitignore
