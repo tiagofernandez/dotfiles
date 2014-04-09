@@ -14,11 +14,10 @@ set mongodb $HOME/Toolbox/mongodb-osx-x86_64-2.4.7/bin
 set heroku /usr/local/heroku/bin
 set groovy /usr/local/Cellar/groovy/2.1.8/bin
 set npm /usr/local/share/npm/bin
-set pyenv $HOME/.pyenv/versions/2.7.5/bin $HOME/.pyenv/shims
 set rvm $HOME/.rvm/bin
 
 # Define the path
-set -gx PATH $rvm $pyenv $npm $groovy $heroku $mongodb $postgresql $PATH
+set -gx PATH $rvm $npm $groovy $heroku $mongodb $postgresql $PATH
 
 # Configure Git's prompt
 set __fish_git_prompt_showdirtystate 'yes'
