@@ -59,12 +59,16 @@ set rvm_project_rvmrc 1
 # Show hidden files by default
 alias ls='ls -a'
 
-function reload_fish --description='Reloads Fish configuration'
+function reload_fish --description='Reloads the Fish configuration.'
   . $HOME/.config/fish/config.fish
   echo "Fish configuration reloaded."
 end
 
-function gem_uninstall_all --description='Uninstalls all Ruby gems'
+function source_bash --description='Sources a Bash script.'
+  exec /bin/bash -c "source $argv && exec fish"
+end
+
+function gem_uninstall_all --description='Uninstalls all Ruby gems.'
   for each in (gem list --no-version)
     sudo gem uninstall -aIx $each
   end
