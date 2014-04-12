@@ -1,9 +1,6 @@
 [user]
   name = Tiago Fernandez
   email = tiago.fernandez@gmail.com
-[merge]
-  ff = no
-  tool = ksdiff
 [core]
   excludesfile = ~/.gitignore
   editor = subl -w
@@ -15,3 +12,10 @@
 [alias]
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   lg-json = log --no-merges --pretty=format:'\"%h\": {%n \"refs\": \"%d\",%n \"commit\": \"%H\",%n \"author\": \"%an <%ae>\",%n \"date\": \"%ad\",%n \"message\": \"%s\",%n \"details\": \"%b\"%n}'
+[merge]
+  tool = ksdiff
+[mergetool "sourcetree"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
+[difftool "sourcetree"]
+  cmd = ksdiff -w \"$LOCAL\" \"$REMOTE\"
