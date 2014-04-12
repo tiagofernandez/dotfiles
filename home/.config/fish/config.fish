@@ -1,8 +1,8 @@
 # http://fishshell.com/docs/current/index.html
 # http://ridiculousfish.com/shell/user_doc/html/
 
-# Change the greeting message
-set fish_greeting 'Fish shell activated.'
+# Suppress the greeting message
+set fish_greeting ''
 
 # Set Sublime Text as default editor
 set -gx EDITOR subl
