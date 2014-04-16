@@ -14,8 +14,16 @@
   lg-json = log --no-merges --pretty=format:'\"%h\": {%n \"refs\": \"%d\",%n \"commit\": \"%H\",%n \"author\": \"%an <%ae>\",%n \"date\": \"%ad\",%n \"message\": \"%s\",%n \"details\": \"%b\"%n}'
 [merge]
   tool = ksdiff
+[mergetool "ksdiff"]
+  cmd = ksdiff -w $BASE $LOCAL $REMOTE $MERGED
 [mergetool "sourcetree"]
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
   trustExitCode = true
+[diff]
+  tool = ksdiff
+[difftool]
+  prompt = false
+[difftool "ksdiff"]
+  cmd = ksdiff $LOCAL $REMOTE
 [difftool "sourcetree"]
   cmd = ksdiff -w \"$LOCAL\" \"$REMOTE\"
