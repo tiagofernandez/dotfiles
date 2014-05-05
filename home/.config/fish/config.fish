@@ -50,6 +50,7 @@ end
 # Initialize VirtualFish
 . $HOME/.config/fish/virtualfish/virtual.fish
 . $HOME/.config/fish/virtualfish/global_requirements.fish
+. $HOME/.config/fish/virtualfish/auto_activation.fish
 
 # Initialize RVM
 set rvm_project_rvmrc 1
