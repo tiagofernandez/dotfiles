@@ -73,3 +73,7 @@ function gem_uninstall_all --description='Uninstalls all Ruby gems.'
     sudo gem uninstall -aIx $each
   end
 end
+
+function search_class --description='Searches for class in file system of jars.'
+  find -name \*.jar | xargs -n1 -iFILE sh -c "jar tvf FILE | sed -e s#^#FILE:#g" | grep $argv\\.class | cut -f1 -d:
+end
