@@ -30,6 +30,10 @@ set __fish_git_prompt_char_stashstate '↩'
 set __fish_git_prompt_char_upstream_ahead '↑'
 set __fish_git_prompt_char_upstream_behind '↓'
 
+# Configure Docker
+set DOCKER_HOST 'tcp://127.0.0.1:4243'
+alias docker='docker -H $DOCKER_HOST'
+
 # Customize the default prompt
 function fish_prompt
   set last_status $status
