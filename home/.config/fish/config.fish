@@ -34,6 +34,14 @@ set __fish_git_prompt_char_upstream_behind '↓'
 set DOCKER_HOST 'tcp://127.0.0.1:4243'
 alias docker='docker -H $DOCKER_HOST'
 
+function docker_rm_all --description='Remove all Docker containers.'
+  exec /bin/bash -c "docker rm $(docker ps -a -q)"
+end
+
+function docker_rmi_all --description='Remove all Docker images.'
+  exec /bin/bash -c "docker rmi $(docker images -q)"
+end
+
 # Customize the default prompt
 function fish_prompt
   set last_status $status
@@ -54,11 +62,16 @@ end
 # Initialize VirtualFish
 . $HOME/.config/fish/virtualfish/virtual.fish
 . $HOME/.config/fish/virtualfish/global_requirements.fish
-. $HOME/.config/fish/virtualfish/auto_activation.fish
 
 # Initialize RVM
 set rvm_project_rvmrc 1
 . $HOME/.config/fish/functions/rvm.fish
+
+function gem_uninstall_all --description='Uninstalls all Ruby gems.'
+  for each in (gem list --no-version)
+    sudo gem uninstall -aIx $each
+  end
+end
 
 # Show hidden files by default
 alias ls='ls -a'
@@ -70,12 +83,6 @@ end
 
 function source_bash --description='Sources a Bash script.'
   exec /bin/bash -c "source $argv && exec fish"
-end
-
-function gem_uninstall_all --description='Uninstalls all Ruby gems.'
-  for each in (gem list --no-version)
-    sudo gem uninstall -aIx $each
-  end
 end
 
 function search_class --description='Searches for class in file system of jars.'
