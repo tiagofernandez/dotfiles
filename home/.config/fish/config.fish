@@ -33,14 +33,8 @@ set __fish_git_prompt_char_upstream_behind '↓'
 # Configure Docker
 set DOCKER_HOST 'tcp://127.0.0.1:4243'
 alias docker='docker -H $DOCKER_HOST'
-
-function docker_rm_all --description='Remove all Docker containers.'
-  exec /bin/bash -c "docker rm $(docker ps -a -q)"
-end
-
-function docker_rmi_all --description='Remove all Docker images.'
-  exec /bin/bash -c "docker rmi $(docker images -q)"
-end
+alias docker_rm_all='docker rm (docker ps -a -q)'
+alias docker_rmi_all='docker rmi (docker images -q)'
 
 # Customize the default prompt
 function fish_prompt
