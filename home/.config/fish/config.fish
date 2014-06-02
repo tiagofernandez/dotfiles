@@ -81,3 +81,11 @@ end
 function search_class --description='Searches for class in file system of jars.'
   find -name \*.jar | xargs -n1 -iFILE sh -c "jar tvf FILE | sed -e s#^#FILE:#g" | grep $argv\\.class | cut -f1 -d:
 end
+
+function ip_internal --description='Displays the internal IPs.'
+  ifconfig |grep -B1 "inet addr" |awk '{ if ( $1 == "inet" ) { print $2 } else if ( $2 == "Link" ) { printf "%s:" ,$1 } }' |awk -F: '{ print $1 ": " $3 }'
+end
+
+function ip_external --description='Displays the external IP.'
+  curl icanhazip.com
+end
