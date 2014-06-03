@@ -56,6 +56,10 @@ end
 . $HOME/.config/fish/virtualfish/virtual.fish
 . $HOME/.config/fish/virtualfish/global_requirements.fish
 
+function pip_uninstall_all --description='Uninstall all Python packages.'
+  pip freeze | xargs pip uninstall -y
+end
+
 # Initialize RVM
 set rvm_project_rvmrc 1
 . $HOME/.config/fish/functions/rvm.fish
