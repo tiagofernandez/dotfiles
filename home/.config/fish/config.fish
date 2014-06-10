@@ -87,7 +87,7 @@ function search_class --description='Searches for class in file system of jars.'
 end
 
 function ip_internal --description='Displays the internal IPs.'
-  ifconfig | grep -B1 "inet addr" | awk '{ if ( $1 == "inet" ) { print $2 } else if ( $2 == "Link" ) { printf "%s:" ,$1 } }' | awk -F: '{ print $1 ": " $3 }'
+  ifconfig | grep -B1 "inet" | awk '{ if ( $1 == "inet" ) { print $2 } else if ( $2 == "Link" ) { printf "%s:" ,$1 } }' | awk -F: '{ print $1 ": " $3 }'
 end
 
 function ip_external --description='Displays the external IP.'
