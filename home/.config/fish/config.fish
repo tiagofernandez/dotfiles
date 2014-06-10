@@ -70,9 +70,6 @@ function gem_uninstall_all --description='Uninstalls all Ruby gems.'
   end
 end
 
-# Show hidden files by default
-alias ls='ls -a'
-
 function reload_fish --description='Reloads the Fish configuration.'
   . $HOME/.config/fish/config.fish
   echo "Fish configuration reloaded."
@@ -86,10 +83,16 @@ function search_class --description='Searches for class in file system of jars.'
   find -name \*.jar | xargs -n1 -iFILE sh -c "jar tvf FILE | sed -e s#^#FILE:#g" | grep $argv\\.class | cut -f1 -d:
 end
 
-function ip_internal --description='Displays the internal IPs.'
-  ifconfig | grep -B1 "inet" | awk '{ if ( $1 == "inet" ) { print $2 } else if ( $2 == "Link" ) { printf "%s:" ,$1 } }' | awk -F: '{ print $1 ": " $3 }'
+function ip_internal --description='Displays the internal IP.'
+  ifconfig | grep -v 127.0.0.1 | perl -ne 'print $1 if /inet\s.*?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\b/'
 end
 
 function ip_external --description='Displays the external IP.'
   curl icanhazip.com
 end
+
+# Show hidden files by default
+alias ls='ls -a'
+
+# Set useful variables
+set -gx INTERNAL_IP (ip_internal)
