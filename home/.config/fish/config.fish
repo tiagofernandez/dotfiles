@@ -31,7 +31,7 @@ set __fish_git_prompt_char_upstream_ahead '↑'
 set __fish_git_prompt_char_upstream_behind '↓'
 
 # Configure Docker
-set -gx DOCKER_HOST 'tcp://localhost:4243'
+set -gx DOCKER_HOST 'tcp://192.168.59.103:2375'
 alias docker_rm_all='docker rm (docker ps -a -q)'
 alias docker_rmi_all='docker rmi (docker images -q)'
 
