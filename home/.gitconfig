@@ -14,6 +14,8 @@
   lg-json = log --no-merges --pretty=format:'\"%h\": {%n \"refs\": \"%d\",%n \"commit\": \"%H\",%n \"author\": \"%an <%ae>\",%n \"date\": \"%ad\",%n \"message\": \"%s\",%n \"details\": \"%b\"%n}'
 [credential]
   helper = cache --timeout=2419200
+[push]
+	default = simple
 [merge]
   tool = ksdiff
 [mergetool "ksdiff"]
