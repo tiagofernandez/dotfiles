@@ -84,7 +84,7 @@ function search_class --description='Searches for class in file system of jars.'
 end
 
 function ip_internal --description='Displays the internal IP.'
-  ifconfig en1 | perl -ne 'print $1 if /inet\s.*?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\b/'
+  ifconfig | grep -v 127.0.0.1 | sed -En 's/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'
 end
 
 function ip_external --description='Displays the external IP.'
