@@ -96,3 +96,6 @@ alias ls='ls -a'
 
 # Set useful variables
 set -gx INTERNAL_IP (ip_internal)
+
+# Run last command as root
+alias fuck='sudo $history[1]'
