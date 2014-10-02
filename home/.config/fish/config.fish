@@ -98,4 +98,4 @@ alias ls='ls -a'
 set -gx INTERNAL_IP (ip_internal)
 
 # Run last command as root
-alias fuck='sudo $history[1]'
+alias fuck='eval command sudo $history[1]'
