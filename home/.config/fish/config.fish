@@ -50,7 +50,7 @@ function fish_prompt
 end
 
 # Initialize Pyenv
-. (pyenv init - | psub)
+status --is-interactive; and . (pyenv init - | psub)
 
 # Initialize VirtualFish
 . $HOME/.config/fish/virtualfish/virtual.fish
