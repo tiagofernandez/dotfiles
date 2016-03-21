@@ -2,6 +2,11 @@
 
 My configuration files and useful scripts in OS X.
 
+## Setup
+
+```
+sh -c "make"
+```
 
 ## Author
 
