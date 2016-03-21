@@ -8,17 +8,6 @@ set fish_greeting ''
 set -gx EDITOR subl
 set -gx VISUAL subl
 
-# Define bin path variables
-set postgresql /Library/PostgreSQL/9.3/bin
-set mongodb $HOME/Toolbox/mongodb-osx-x86_64-2.4.7/bin
-set heroku /usr/local/heroku/bin
-set groovy /usr/local/Cellar/groovy/2.1.8/bin
-set npm /usr/local/share/npm/bin
-set rvm $HOME/.rvm/bin
-
-# Define the path
-set -gx PATH $rvm $npm $groovy $heroku $mongodb $postgresql $PATH
-
 # Configure Git's prompt
 set __fish_git_prompt_showdirtystate 'yes'
 set __fish_git_prompt_showstashstate 'yes'
@@ -51,9 +40,6 @@ function fish_prompt
   set_color normal
 end
 
-# Initialize Pyenv
-# status --is-interactive; and . (pyenv init - | psub)
-
 # Initialize VirtualFish
 . $HOME/.config/fish/virtualfish/virtual.fish
 . $HOME/.config/fish/virtualfish/global_requirements.fish
@@ -61,10 +47,6 @@ end
 function pip_uninstall_all --description='Uninstall all Python packages.'
   pip freeze | grep -v "^-e" | xargs pip uninstall -y
 end
-
-# Initialize RVM
-set rvm_project_rvmrc 1
-. $HOME/.config/fish/functions/rvm.fish
 
 function gem_uninstall_all --description='Uninstalls all Ruby gems.'
   for each in (gem list --no-version)
