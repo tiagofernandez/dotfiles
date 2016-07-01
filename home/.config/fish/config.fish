@@ -20,11 +20,14 @@ set __fish_git_prompt_char_upstream_ahead '↑'
 set __fish_git_prompt_char_upstream_behind '↓'
 
 # Configure Docker
-set -gx DOCKER_HOST 'tcp://:2375'
 alias docker_rm_all='docker rm (docker ps -a -q)'
 alias docker_rm_clean='docker ps -a | egrep "weeks ago|months ago" | awk "{print $1}" | xargs --no-run-if-empty docker rm'
 alias docker_rmi_all='docker rmi (docker images -q)'
 alias docker_rmi_clean='docker images | awk "/^<none>/ {print $3}" | xargs docker rmi'
+
+# Configure Go
+set -gx GOPATH $HOME/go
+set -gx PATH $GOPATH/bin $PATH
 
 # Customize the default prompt
 function fish_prompt
