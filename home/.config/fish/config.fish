@@ -4,9 +4,9 @@
 # Suppress the greeting message
 set fish_greeting ''
 
-# Set Sublime Text as default editor
-set -gx EDITOR subl
-set -gx VISUAL subl
+# Set Vim as default editor
+set -gx EDITOR vim
+set -gx VISUAL vim
 
 # Configure Git's prompt
 set __fish_git_prompt_showdirtystate 'yes'
