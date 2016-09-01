@@ -1,35 +1,10 @@
 # http://fishshell.com/docs/current/index.html
 # http://ridiculousfish.com/shell/user_doc/html/
 
-# Suppress the greeting message
+# Greeting message
 set fish_greeting ''
 
-# Set Vim as default editor
-set -gx EDITOR vim
-set -gx VISUAL vim
-
-# Configure Git's prompt
-set __fish_git_prompt_showdirtystate 'yes'
-set __fish_git_prompt_showstashstate 'yes'
-set __fish_git_prompt_showupstream 'yes'
-set __fish_git_prompt_color_branch yellow
-set __fish_git_prompt_char_dirtystate '⚡'
-set __fish_git_prompt_char_stagedstate '→'
-set __fish_git_prompt_char_stashstate '↩'
-set __fish_git_prompt_char_upstream_ahead '↑'
-set __fish_git_prompt_char_upstream_behind '↓'
-
-# Configure Docker
-alias docker_rm_all='docker rm (docker ps -a -q)'
-alias docker_rm_clean='docker ps -a | egrep "weeks ago|months ago" | awk "{print $1}" | xargs --no-run-if-empty docker rm'
-alias docker_rmi_all='docker rmi (docker images -q)'
-alias docker_rmi_clean='docker images | awk "/^<none>/ {print $3}" | xargs docker rmi'
-
-# Configure Go
-set -gx GOPATH $HOME/go
-set -gx PATH $GOPATH/bin $PATH
-
-# Customize the default prompt
+# Fish prompt
 function fish_prompt
   set last_status $status
   set_color $fish_color_cwd
@@ -43,38 +18,73 @@ function fish_prompt
   set_color normal
 end
 
-# Initialize VirtualFish
+# VirtualFish
 . $HOME/.config/fish/virtualfish/virtual.fish
 . $HOME/.config/fish/virtualfish/global_requirements.fish
 
+# Default editor
+set -gx EDITOR vim
+set -gx VISUAL vim
+
+# Git prompt
+set __fish_git_prompt_showdirtystate 'yes'
+set __fish_git_prompt_showstashstate 'yes'
+set __fish_git_prompt_showupstream 'yes'
+set __fish_git_prompt_color_branch yellow
+set __fish_git_prompt_char_dirtystate '⚡'
+set __fish_git_prompt_char_stagedstate '→'
+set __fish_git_prompt_char_stashstate '↩'
+set __fish_git_prompt_char_upstream_ahead '↑'
+set __fish_git_prompt_char_upstream_behind '↓'
+
+# Docker
+alias docker_rm_all='docker rm (docker ps -a -q)'
+alias docker_rm_clean='docker ps -a | egrep "weeks ago|months ago" | awk "{print $1}" | xargs --no-run-if-empty docker rm'
+alias docker_rmi_all='docker rmi (docker images -q)'
+alias docker_rmi_clean='docker images | awk "/^<none>/ {print $3}" | xargs docker rmi'
+
+# Java
+set JAVA_HOME /usr/libexec/java_home
+
+# Go
+set -gx GOPATH $HOME/go
+set -gx PATH $GOPATH/bin $PATH
+
+# Python
 function pip_uninstall_all --description='Uninstall all Python packages.'
   pip freeze | grep -v "^-e" | xargs pip uninstall -y
 end
 
+# Ruby
 function gem_uninstall_all --description='Uninstalls all Ruby gems.'
   for each in (gem list --no-version)
     sudo gem uninstall -aIx $each
   end
 end
 
-function reload_fish --description='Reloads the Fish configuration.'
+# Reloads the Fish configuration
+function reload_fish
   . $HOME/.config/fish/config.fish
   echo "Fish configuration reloaded."
 end
 
-function source_bash --description='Sources a Bash script.'
+# Sources a Bash script
+function source_bash
   exec /bin/bash -c "source $argv && exec fish"
 end
 
-function search_class --description='Searches for class in file system of jars.'
+# Searches for class in file system of jars
+function search_class
   find -name \*.jar | xargs -n1 -iFILE sh -c "jar tvf FILE | sed -e s#^#FILE:#g" | grep $argv\\.class | cut -f1 -d:
 end
 
-function ip_internal --description='Displays the internal IP.'
+# Displays the internal IP
+function ip_internal
   ifconfig | grep -v 127.0.0.1 | sed -En 's/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'
 end
 
-function ip_external --description='Displays the external IP.'
+# Displays the external IP
+function ip_external
   curl icanhazip.com
 end
 
