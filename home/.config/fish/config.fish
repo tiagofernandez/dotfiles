@@ -44,7 +44,7 @@ alias docker_rmi_all='docker rmi (docker images -q)'
 alias docker_rmi_clean='docker images | awk "/^<none>/ {print $3}" | xargs docker rmi'
 
 # Java
-set JAVA_HOME /usr/libexec/java_home
+set -gx JAVA_HOME /usr/libexec/java_home
 
 # Go
 set -gx GOPATH $HOME/go
