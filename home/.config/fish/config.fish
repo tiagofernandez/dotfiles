@@ -51,6 +51,8 @@ set -gx GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
 
 # Python
+source ~/.config/fish/autoenv.fish
+
 function pip_uninstall_all --description='Uninstall all Python packages.'
   pip freeze | grep -v "^-e" | xargs pip uninstall -y
 end
