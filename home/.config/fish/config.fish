@@ -90,6 +90,12 @@ function ip_external
   curl icanhazip.com
 end
 
+# Creates a directory and enters it
+function mkcd
+  mkdir -p $argv
+  cd $argv
+end
+
 # Show hidden files by default
 alias ls='ls -a'
 
