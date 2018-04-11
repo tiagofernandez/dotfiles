@@ -96,6 +96,11 @@ function mkcd
   cd $argv
 end
 
+# Renames JPEG files according to their creation dates
+function rename_jpg
+  bash -c 'for i in *.JPG; do newname=$(stat -t %Y%m%d%H%M%S -f %Sm -- $i); mv -- $i $newname.jpg; done'
+end
+
 # Show hidden files by default
 alias ls='ls -a'
 
