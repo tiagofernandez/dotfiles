@@ -44,11 +44,7 @@ alias docker_rmi_all='docker rmi (docker images -q)'
 alias docker_rmi_clean='docker images | awk "/^<none>/ {print $3}" | xargs docker rmi'
 
 # Java
-set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home
-
-# Go
-set -gx GOPATH $HOME/go
-set -gx PATH $GOPATH/bin $PATH
+set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/
 
 # Python
 source ~/.config/fish/autoenv.fish
