@@ -71,6 +71,17 @@ function source_bash
   exec /bin/bash -c "source $argv && exec fish"
 end
 
+# Sources an env file
+function source_env
+  for i in (cat $argv)
+    set arr (echo $i |tr = \n)
+    set arr_length (count $arr)
+    if [ $arr_length = 2 ]
+      set -gx $arr[1] $arr[2]
+    end
+  end
+end
+
 # Searches for class in file system of jars
 function search_class
   find -name \*.jar | xargs -n1 -iFILE sh -c "jar tvf FILE | sed -e s#^#FILE:#g" | grep $argv\\.class | cut -f1 -d:
