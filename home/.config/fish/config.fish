@@ -114,5 +114,8 @@ alias ls='ls -a'
 # Set useful variables
 set -gx INTERNAL_IP (ip_internal)
 
+# Unleash the party parrot!
+alias parrot='curl http://parrot.live'
+
 # Run last command as root
 alias fuck='eval command sudo $history[1]'
