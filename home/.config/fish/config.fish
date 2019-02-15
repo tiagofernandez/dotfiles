@@ -76,7 +76,7 @@ function source_env
   for i in (cat $argv)
     set arr (echo $i |tr = \n)
     set arr_length (count $arr)
-    if [ $arr_length = 2 ]
+    if [ $arr_length = 2 -a (string sub --length 1 $arr[1]) != "#" ]
       set -gx $arr[1] $arr[2]
     end
   end
