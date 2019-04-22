@@ -60,6 +60,11 @@ function gem_uninstall_all --description='Uninstalls all Ruby gems.'
   end
 end
 
+# Zlib
+set -gx LDFLAGS "$LDFLAGS -L/usr/local/opt/zlib/lib"
+set -gx CPPFLAGS "$CPPFLAGS -I/usr/local/opt/zlib/include"
+set -gx PKG_CONFIG_PATH "$PKG_CONFIG_PATH /usr/local/opt/zlib/lib/pkgconfig"
+
 # Reloads the Fish configuration
 function reload_fish
   . $HOME/.config/fish/config.fish
