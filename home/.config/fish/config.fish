@@ -115,6 +115,7 @@ end
 
 # Show hidden files by default
 alias ls='ls -a'
+alias ll='ls -la'
 
 # Set useful variables
 set -gx INTERNAL_IP (ip_internal)
