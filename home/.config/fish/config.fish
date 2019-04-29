@@ -48,6 +48,7 @@ set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home
 
 # Python
 source ~/.config/fish/autoenv.fish
+pyenv init - | source
 
 function pip_uninstall_all --description='Uninstall all Python packages.'
   pip freeze | grep -v "^-e" | xargs pip uninstall -y
