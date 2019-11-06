@@ -47,7 +47,6 @@ alias docker_rmi_clean='docker images | awk "/^<none>/ {print $3}" | xargs docke
 set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/openjdk-12.0.1.jdk/Contents/Home/
 
 # Python
-source ~/.config/fish/autoenv.fish
 pyenv init - | source
 
 function pip_uninstall_all --description='Uninstall all Python packages.'
