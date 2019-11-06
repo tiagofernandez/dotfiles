@@ -125,4 +125,8 @@ set -gx INTERNAL_IP (ip_internal)
 alias parrot='curl http://parrot.live'
 
 # Run last command as root
-alias fuck='eval command sudo $history[1]'
+# Run last command as root
+alias please='eval command sudo $history[1]'
+
+# Starship prompt
+starship init fish | source
