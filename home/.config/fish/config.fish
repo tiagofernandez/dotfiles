@@ -4,20 +4,6 @@
 # Greeting message
 set fish_greeting ''
 
-# Fish prompt
-function fish_prompt
-  set last_status $status
-  set_color $fish_color_cwd
-  printf '%s' (prompt_pwd)
-  if set -q VIRTUAL_ENV
-    set_color magenta
-    printf ' (%s)' (basename "$VIRTUAL_ENV")
-  end
-  set_color normal
-  printf '%s ' (__fish_git_prompt)
-  set_color normal
-end
-
 # VirtualFish
 . $HOME/.config/fish/virtualfish/virtual.fish
 . $HOME/.config/fish/virtualfish/global_requirements.fish
@@ -25,17 +11,6 @@ end
 # Default editor
 set -gx EDITOR vim
 set -gx VISUAL vim
-
-# Git prompt
-set __fish_git_prompt_showdirtystate 'yes'
-set __fish_git_prompt_showstashstate 'yes'
-set __fish_git_prompt_showupstream 'yes'
-set __fish_git_prompt_color_branch yellow
-set __fish_git_prompt_char_dirtystate '⚡'
-set __fish_git_prompt_char_stagedstate '→'
-set __fish_git_prompt_char_stashstate '↩'
-set __fish_git_prompt_char_upstream_ahead '↑'
-set __fish_git_prompt_char_upstream_behind '↓'
 
 # Docker
 alias docker_rm_all='docker rm (docker ps -a -q)'
