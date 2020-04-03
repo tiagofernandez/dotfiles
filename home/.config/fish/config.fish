@@ -21,6 +21,13 @@ alias docker_rmi_clean='docker images | awk "/^<none>/ {print $3}" | xargs docke
 # Java
 set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/openjdk-12.0.1.jdk/Contents/Home/
 
+# NVM
+set -gx NVM_DIR $HOME/.nvm
+
+function nvm
+  bass source $HOME/.nvm/nvm.sh --no-use ';' nvm $argv
+end
+
 # Python
 pyenv init - | source
 
