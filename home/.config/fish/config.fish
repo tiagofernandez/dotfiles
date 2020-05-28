@@ -12,6 +12,10 @@ set fish_greeting ''
 set -gx EDITOR vim
 set -gx VISUAL vim
 
+# Go
+set -gx GOPATH $HOME/Work/go
+set -gx PATH $PATH $GOPATH/bin
+
 # Java
 set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/openjdk-14.0.1.jdk/Contents/Home/
 
