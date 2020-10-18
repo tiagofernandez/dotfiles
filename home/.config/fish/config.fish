@@ -28,6 +28,7 @@ end
 
 # Python
 pyenv init - | source
+set pipenv_fish_fancy yes 
 
 # Zlib
 set -gx LDFLAGS "$LDFLAGS -L/usr/local/opt/zlib/lib"
