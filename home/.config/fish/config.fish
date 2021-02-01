@@ -26,6 +26,8 @@ function nvm
   bass source $HOME/.nvm/nvm.sh --no-use ';' nvm $argv
 end
 
+nvm use default >/dev/null 2>&1
+
 # Python
 pyenv init - | source
 
