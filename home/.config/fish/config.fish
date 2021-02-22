@@ -59,9 +59,7 @@ function source_env
 end
 
 # Unsets an env variable
-function unset
-  set --erase $argv
-end
+alias unset 'set --erase'
 
 # Renames JPEG files according to their creation dates
 function rename_jpg
