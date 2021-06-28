@@ -16,6 +16,9 @@ set -gx VISUAL vim
 set -gx GOPATH $HOME/Work/go
 set -gx PATH $PATH $GOPATH/bin
 
+# Kubernetes
+alias k='kubectl'
+
 # Java
 set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/openjdk-14.0.1.jdk/Contents/Home/
 
@@ -67,8 +70,7 @@ function rename_jpg
 end
 
 # Show hidden files by default
-alias ls='ls -a'
-alias ll='ls -la'
+alias ls='ls -la'
 
 # Run last command as root
 alias please='eval command sudo $history[1]'
