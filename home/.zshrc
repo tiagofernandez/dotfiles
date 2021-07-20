@@ -70,6 +70,9 @@ source <(kubectl completion zsh)
 autoload -Uz compinit
 complete -F __start_kubectl k
 
+# https://krew.sigs.k8s.io/docs/user-guide/setup/install/
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
 # https://github.com/nvm-sh/nvm#calling-nvm-use-automatically-in-a-directory-with-a-nvmrc-file
 autoload -U add-zsh-hook
 load-nvmrc() {
