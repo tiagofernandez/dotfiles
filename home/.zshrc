@@ -61,6 +61,9 @@ eval "$(starship init zsh)"
 # https://github.com/pyenv/pyenv#readme
 eval "$(pyenv init --path)"
 
+# https://rvm.io/
+export PATH="$PATH:$HOME/.rvm/bin"
+
 # https://github.com/moovweb/gvm#readme
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
