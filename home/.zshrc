@@ -67,6 +67,12 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # https://github.com/moovweb/gvm#readme
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
+# https://docs.docker.com/engine/reference/commandline/system_prune/
+docker-nuke() {
+  docker rmi -f $(docker images -a -q)
+  docker system prune -f
+}
+
 # https://kubernetes.io/docs/tasks/tools/included/optional-kubectl-configs-zsh/
 alias k="kubectl"
 source <(kubectl completion zsh)
