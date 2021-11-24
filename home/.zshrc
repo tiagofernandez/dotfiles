@@ -67,6 +67,10 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # https://github.com/moovweb/gvm#readme
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
+# https://asdf-vm.com/guide/getting-started.html#_3-install-asdf
+. /usr/local/opt/asdf/libexec/asdf.sh
+. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+
 # https://docs.docker.com/engine/reference/commandline/system_prune/
 docker-nuke() {
   docker rmi -f $(docker images -a -q)
