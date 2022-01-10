@@ -74,7 +74,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # https://docs.docker.com/engine/reference/commandline/system_prune/
 docker-nuke() {
   docker rmi -f $(docker images -a -q)
-  docker system prune -f
+  docker system prune -a --volumes -f
 }
 
 # https://kubernetes.io/docs/tasks/tools/included/optional-kubectl-configs-zsh/
