@@ -61,6 +61,9 @@ eval "$(starship init zsh)"
 # https://github.com/pyenv/pyenv#readme
 eval "$(pyenv init --path)"
 
+# https://github.com/Textualize/rich-cli
+export PATH="$PATH:~/.local/bin"
+
 # https://rvm.io/
 export PATH="$PATH:$HOME/.rvm/bin"
 
@@ -121,6 +124,9 @@ if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-clou
 
 # https://direnv.net/
 eval "$(direnv hook zsh)"
+
+# https://github.com/ellie/atuin#--atuin
+eval "$(atuin init zsh)"
 
 # Useful aliases.
 alias ll="ls -lah"
