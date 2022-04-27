@@ -125,8 +125,5 @@ if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-clou
 # https://direnv.net/
 eval "$(direnv hook zsh)"
 
-# https://github.com/ellie/atuin#--atuin
-eval "$(atuin init zsh)"
-
 # Useful aliases.
 alias ll="ls -lah"
