@@ -64,6 +64,9 @@ eval "$(pyenv init --path)"
 # https://github.com/Textualize/rich-cli
 export PATH="$PATH:~/.local/bin"
 
+# https://formulae.brew.sh/formula/make
+export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+
 # https://rvm.io/
 export PATH="$PATH:$HOME/.rvm/bin"
 
