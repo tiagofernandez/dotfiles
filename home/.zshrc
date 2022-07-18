@@ -76,6 +76,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # https://docs.docker.com/engine/reference/commandline/system_prune/
 docker-nuke() {
+  docker kill $(docker ps -q)
   docker rmi -f $(docker images -a -q)
   docker system prune -a --volumes -f
 }
