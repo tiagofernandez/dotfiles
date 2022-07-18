@@ -96,6 +96,9 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 # https://github.com/wercker/stern
 source <(stern --completion=zsh)
 
+# nvm bash completion.
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
 # https://github.com/nvm-sh/nvm#calling-nvm-use-automatically-in-a-directory-with-a-nvmrc-file
 autoload -U add-zsh-hook
 load-nvmrc() {
