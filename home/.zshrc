@@ -70,8 +70,20 @@ export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 # https://rvm.io/
 export PATH="$PATH:$HOME/.rvm/bin"
 
+# https://opensource.apple.com/source/zsh/zsh-65/zsh/Functions/Misc/add-zsh-hook.auto.html
+autoload -U add-zsh-hook
+
 # https://github.com/moovweb/gvm#readme
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+
+load-gvm() {
+  if [ -f "go.mod" ]; then
+    local version=(`awk '/^go / {print $1$2}' go.mod`)
+    gvm use ${version}
+  fi
+}
+add-zsh-hook chpwd load-gvm
+load-gvm
 
 # https://asdf-vm.com/guide/getting-started.html#_3-install-asdf
 . /usr/local/opt/asdf/libexec/asdf.sh
@@ -100,7 +112,6 @@ source <(stern --completion=zsh)
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # https://github.com/nvm-sh/nvm#calling-nvm-use-automatically-in-a-directory-with-a-nvmrc-file
-autoload -U add-zsh-hook
 load-nvmrc() {
   local node_version="$(nvm version)"
   local nvmrc_path="$(nvm_find_nvmrc)"
