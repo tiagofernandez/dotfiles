@@ -52,6 +52,9 @@ _fzf_compgen_dir() {
   fd --type d --hidden --follow --exclude ".git" . "$1"
 }
 
+# https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
 # https://github.com/ohmyzsh/ohmyzsh#readme
 source $ZSH/oh-my-zsh.sh
 
