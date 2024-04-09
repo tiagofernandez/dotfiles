@@ -1,3 +1,8 @@
+alias ll="ls -lah"
+
+# https://brew.sh/
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -40,6 +45,9 @@ else
   export EDITOR="subl"
 fi
 
+# https://github.com/junegunn/fzf?tab=readme-ov-file#-
+eval "$(fzf --zsh)"
+
 # Use https://github.com/sharkdp/fd instead of the default find for listing path candidates.
 # - The first argument to the function ($1) is the base path to start traversal
 # - See the source code (completion.{bash,zsh}) for the details.
@@ -64,15 +72,6 @@ eval "$(starship init zsh)"
 # https://github.com/pyenv/pyenv#readme
 eval "$(pyenv init --path)"
 
-# https://github.com/Textualize/rich-cli
-export PATH="$PATH:~/.local/bin"
-
-# https://formulae.brew.sh/formula/make
-export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
-
-# https://rvm.io/
-export PATH="$PATH:$HOME/.rvm/bin"
-
 # https://opensource.apple.com/source/zsh/zsh-65/zsh/Functions/Misc/add-zsh-hook.auto.html
 autoload -U add-zsh-hook
 
@@ -89,8 +88,7 @@ add-zsh-hook chpwd load-gvm
 load-gvm
 
 # https://asdf-vm.com/guide/getting-started.html#_3-install-asdf
-. /usr/local/opt/asdf/libexec/asdf.sh
-. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # https://docs.docker.com/engine/reference/commandline/system_prune/
 docker-nuke() {
@@ -105,13 +103,12 @@ source <(kubectl completion zsh)
 autoload -Uz compinit
 complete -F __start_kubectl k
 
-# https://krew.sigs.k8s.io/docs/user-guide/setup/install/
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-
 # https://github.com/wercker/stern
 source <(stern --completion=zsh)
 
 # nvm bash completion.
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # https://github.com/nvm-sh/nvm#calling-nvm-use-automatically-in-a-directory-with-a-nvmrc-file
@@ -135,16 +132,14 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
+# https://direnv.net/
+eval "$(direnv hook zsh)"
+
 # https://sdkman.io/install
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-# https://cloud.google.com/sdk/docs/install
-source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
-
-# https://direnv.net/
-eval "$(direnv hook zsh)"
-
-# Useful aliases.
-alias ll="ls -lah"
+# Misc tools and local binaries.
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
+export PATH="$PATH:~/.local/bin"
