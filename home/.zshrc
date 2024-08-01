@@ -99,12 +99,8 @@ docker-nuke() {
 
 # https://kubernetes.io/docs/tasks/tools/included/optional-kubectl-configs-zsh/
 alias k="kubectl"
-source <(kubectl completion zsh)
 autoload -Uz compinit
 complete -F __start_kubectl k
-
-# https://github.com/wercker/stern
-source <(stern --completion=zsh)
 
 # nvm bash completion.
 export NVM_DIR="$HOME/.nvm"
