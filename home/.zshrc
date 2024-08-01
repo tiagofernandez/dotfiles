@@ -42,7 +42,7 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR="vim"
 else
-  export EDITOR="subl"
+  export EDITOR="vim" # subl
 fi
 
 # https://github.com/junegunn/fzf?tab=readme-ov-file#-
