@@ -39,11 +39,10 @@ zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
 
 # Preferred editor for local and remote sessions.
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR="vim"
-else
-  export EDITOR="vim" # subl
-fi
+export EDITOR="vim"
+
+# kubectl edit command will use this env var.
+export KUBE_EDITOR="vim"
 
 # https://github.com/junegunn/fzf?tab=readme-ov-file#-
 eval "$(fzf --zsh)"
