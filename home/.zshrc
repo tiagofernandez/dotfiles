@@ -1,5 +1,8 @@
 alias ll="ls -lah"
 
+# https://www.gnu.org/software/gettext/manual/html_node/Locale-Environment-Variables.html
+export LANG="en_US.UTF-8"
+
 # https://brew.sh/
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
