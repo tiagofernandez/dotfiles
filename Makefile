@@ -1,7 +1,10 @@
-all: copy-home set-defaults
+all: copy-home copy-scripts set-defaults
 
 copy-home:
 	@cd home && find . | cpio -pud ~
+	
+copy-scripts:
+	@cd scripts && find . | cpio -pud /usr/local/bin
 	
 set-defaults:
 	chflags nohidden ~/Library/
