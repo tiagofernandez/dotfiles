@@ -3,6 +3,9 @@ set -euo pipefail
 
 # ### How to Use
 
+#   • After installing to ~/.local/bin, run:
+#     rename_photos
+#
 #   • Run directly in the current folder:
 #     ./rename_photos.sh
 
@@ -39,7 +42,7 @@ for arg in "$@"; do
             DRY_RUN=true
             ;;
         -h|--help)
-            echo "Usage: $(basename "$0") [-n|--dry-run] [DIRECTORY]"
+            echo "Usage: $(basename "$0" .sh) [-n|--dry-run] [DIRECTORY]"
             echo ""
             echo "Renames images and videos using ExifTool based on:"
             echo "  1. Capture date (DateTimeOriginal for images, CreateDate for videos)"
